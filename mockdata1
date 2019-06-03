@@ -1,76 +1,11 @@
-Naam, Adres, Postcode, Stad
-Giel Schoonderwoert, Beukenstraat 83, 8025BK,
-Bastijn Geerlichs, Berkumstraat 63, 8021 BP,
-Rinus Kruiper, Mandjesstraat 12A, 8011 PM,
-Willem Poffers, Vincent Lübeckstraat 25, 8031 WE,
-Marthijn Buunk, Assendorperstraat 71, 8012 DG,
-Veerle Diepen, Rieteweg 21, 8041 AJ,
-Anne-Marije Fingerling, Assendorperstraat 309, 8012 DN,
-Marijntje Oord, Dollard 11, 8032 KA,
-Ineke Knollert, Ter Pelkwijkpark 17, 8011 SH,
-Joosje Schovers, Koggelaan 8, 8017 JN, 
-
-https://www.csvjson.com/csv2json
-
-[
-  {
-    "Naam": "Giel Schoonderwoert",
-    "Adres": "Beukenstraat 83",
-    "Postcode": "8025BK",
-    "Stad": ""
-  },
-  {
-    "Naam": "Bastijn Geerlichs",
-    "Adres": "Berkumstraat 63",
-    "Postcode": "8021 BP",
-    "Stad": ""
-  },
-  {
-    "Naam": "Rinus Kruiper",
-    "Adres": "Mandjesstraat 12A",
-    "Postcode": "8011 PM",
-    "Stad": ""
-  },
-  {
-    "Naam": "Willem Poffers",
-    "Adres": "Vincent Lübeckstraat 25",
-    "Postcode": "8031 WE",
-    "Stad": ""
-  },
-  {
-    "Naam": "Marthijn Buunk",
-    "Adres": "Assendorperstraat 71",
-    "Postcode": "8012 DG",
-    "Stad": ""
-  },
-  {
-    "Naam": "Veerle Diepen",
-    "Adres": "Rieteweg 21",
-    "Postcode": "8041 AJ",
-    "Stad": ""
-  },
-  {
-    "Naam": "Anne-Marije Fingerling",
-    "Adres": "Assendorperstraat 309",
-    "Postcode": "8012 DN",
-    "Stad": ""
-  },
-  {
-    "Naam": "Marijntje Oord",
-    "Adres": "Dollard 11",
-    "Postcode": "8032 KA",
-    "Stad": ""
-  },
-  {
-    "Naam": "Ineke Knollert",
-    "Adres": "Ter Pelkwijkpark 17",
-    "Postcode": "8011 SH",
-    "Stad": ""
-  },
-  {
-    "Naam": "Joosje Schovers",
-    "Adres": "Koggelaan 8",
-    "Postcode": "8017 JN",
-    "Stad": ""
-  }
-]
+Naam, Adres, Postcode, Stad, 
+Giel Schoonderwoert, Beukenstraat 83, 8025BK, Zwolle, 
+Bastijn Geerlichs, Berkumstraat 63, 8021 BP, Zwolle,
+Rinus Kruiper, Mandjesstraat 12A, 8011 PM, Zwolle,
+Willem Poffers, Vincent Lübeckstraat 25, 8031 WE, Zwolle,
+Marthijn Buunk, Assendorperstraat 71, 8012 DG, Zwolle,
+Veerle Diepen, Rieteweg 21, 8041 AJ, Zwolle,
+Anne-Marije Fingerling, Assendorperstraat 309, 8012 DN, Zwolle,
+Marijntje Oord, Dollard 11, 8032 KA, Zwolle,
+Ineke Knollert, Ter Pelkwijkpark 17, 8011 SH, Zwolle,
+Joosje Schovers, Koggelaan 8, 8017 JN, Zwolle,

@@ -13,7 +13,7 @@ public class Pakket {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	long id;
 	
-	private String naam, adres, postcode, stad, pakket, afzender, huidige_locatie;
+	private String adres, afzender, postcode, stad, pakket, naam, huidige_locatie;
 	private int gewicht;
 	
 	public Pakket() {}

@@ -2,14 +2,127 @@ naam, adres, postcode, stad, pakket, afzender, huidige_locatie, gewicht
 Giel Schoonderwoert, Beukenstraat 83, 8025BK, Zwolle, LS5471, Bol, base, 30
 Bastijn Geerlichs, Berkumstraat 63, 8021 BP, Zwolle, KH617831, Bol, base, 56
 Rinus Kruiper, Mandjesstraat 12A, 8011 PM, Zwolle, JACK-3SEEDS, Greenhouse, base, 40
-Willem Poffers, Vincent Lübeckstraat 25, 8031 WE, Zwolle, 
-Marthijn Buunk, Assendorperstraat 71, 8012 DG, Zwolle,
-Veerle Diepen, Rieteweg 21, 8041 AJ, Zwolle,
-Anne-Marije Fingerling, Assendorperstraat 309, 8012 DN, Zwolle, 
-Marijntje Oord, Dollard 11, 8032 KA, Zwolle,
-Ineke Knollert, Ter Pelkwijkpark 17, 8011 SH, Zwolle,
-Joosje Schovers, Koggelaan 8, 8017 JN, Zwolle,
+Willem Poffers, Vincent Lübeckstraat 25, 8031 WE, Zwolle, ED7/12, Big Dicks Magazine, base, 25
+Marthijn Buunk, Assendorperstraat 71, 8012 DG, Zwolle, USSRAKM, Vladimir Putin Himself, base, 3100
+Veerle Diepen, Rieteweg 21, 8041 AJ, Zwolle, Badpak Ultra9000, Duiken.nl, base, 410
+Anne-Marije Fingerling, Assendorperstraat 309, 8012 DN, Zwolle, Kip, KFC Zwolle, base, 1000
+Marijntje Oord, Dollard 11, 8032 KA, Zwolle, Fruitmand, AH to Go, 6000
+Ineke Knollert, Ter Pelkwijkpark 17, 8011 SH, Zwolle, Tulpenbollen, Bulb & Saura, base, 450
+Joosje Schovers, Koggelaan 8, 8017 JN, Zwolle, Sjoelbak, Marktplaats, base, 10000
 
 Drones
 naam, type, max_kmph_snelheid, max_km_vliegbereik, draagcapaciteit, huidige_locatie, halen_brengen, extra_features
 Pegasus, Ultradrone9000, 70, 300, 50000, base, null, gun (Pfeifer-Zeliska .600 Nitro Express)
+
+[
+  {
+  	"id" : 2,
+    "naam": "Giel Schoonderwoert",
+    "adres": "Beukenstraat 83",
+    "postcode": "8025BK",
+    "stad": "Zwolle",
+    "pakket": "LS5471",
+    "afzender": "Bol",
+    "huidige_locatie": "base",
+    "gewicht": 30
+  },
+  {
+  	"id" : 3,
+    "naam": "Bastijn Geerlichs",
+    "adres": "Berkumstraat 63",
+    "postcode": "8021 BP",
+    "stad": "Zwolle",
+    "pakket": "KH617831",
+    "afzender": "Bol",
+    "huidige_locatie": "base",
+    "gewicht": 56
+  },
+  {
+  	"id" : 4,
+    "naam": "Rinus Kruiper",
+    "adres": "Mandjesstraat 12A",
+    "postcode": "8011 PM",
+    "stad": "Zwolle",
+    "pakket": "JACK-3SEEDS",
+    "afzender": "Greenhouse",
+    "huidige_locatie": "base",
+    "gewicht": 40
+  },
+  {
+  	"id" : 5,
+    "naam": "Willem Poffers",
+    "adres": "Vincent Lübeckstraat 25",
+    "postcode": "8031 WE",
+    "stad": "Zwolle",
+    "pakket": "ED7/12",
+    "afzender": "Big Dicks Magazine",
+    "huidige_locatie": "base",
+    "gewicht": 25
+  },
+  {
+  	"id" : 6,
+    "naam": "Marthijn Buunk",
+    "adres": "Assendorperstraat 71",
+    "postcode": "8012 DG",
+    "stad": "Zwolle",
+    "pakket": "USSRAKM",
+    "afzender": "Vladimir Putin Himself",
+    "huidige_locatie": "base",
+    "gewicht": 3100
+  },
+  {
+  	"id" : 7,
+    "naam": "Veerle Diepen",
+    "adres": "Rieteweg 21",
+    "postcode": "8041 AJ",
+    "stad": "Zwolle",
+    "pakket": "Badpak Ultra9000",
+    "afzender": "Duiken.nl",
+    "huidige_locatie": "base",
+    "gewicht": 410
+  },
+  {
+  	"id" : 8,
+    "naam": "Anne-Marije Fingerling",
+    "adres": "Assendorperstraat 309",
+    "postcode": "8012 DN",
+    "stad": "Zwolle",
+    "pakket": "Kip",
+    "afzender": "KFC Zwolle",
+    "huidige_locatie": "base",
+    "gewicht": 1000
+  },
+  {
+  	"id" : 9,
+    "naam": "Marijntje Oord",
+    "adres": "Dollard 11",
+    "postcode": "8032 KA",
+    "stad": "Zwolle",
+    "pakket": "Fruitmand",
+    "afzender": "AH to Go",
+    "huidige_locatie": 6000,
+    "gewicht": ""
+  },
+  {
+  	"id" : 10,
+    "naam": "Ineke Knollert",
+    "adres": "Ter Pelkwijkpark 17",
+    "postcode": "8011 SH",
+    "stad": "Zwolle",
+    "pakket": "Tulpenbollen",
+    "afzender": "Bulb & Saura",
+    "huidige_locatie": "base",
+    "gewicht": 450
+  },
+  {
+  	"id" : 11,
+    "naam": "Joosje Schovers",
+    "adres": "Koggelaan 8",
+    "postcode": "8017 JN",
+    "stad": "Zwolle",
+    "pakket": "Sjoelbak",
+    "afzender": "Marktplaats",
+    "huidige_locatie": "base",
+    "gewicht": 10000
+  }
+]

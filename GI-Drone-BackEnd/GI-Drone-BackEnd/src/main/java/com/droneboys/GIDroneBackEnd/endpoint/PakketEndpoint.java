@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,9 +12,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.droneboys.GIDroneBackEnd.domain.Pakket;
 import com.droneboys.GIDroneBackEnd.service.PakketService;
+
+
+@RestController
+@RequestMapping(
+		path = "dronebase",
+		produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.TEXT_PLAIN_VALUE})
 
 public class PakketEndpoint {
 
@@ -21,7 +30,7 @@ public class PakketEndpoint {
 	PakketService pakketService;
 	
 	//Create
-	@PostMapping	
+	@PostMapping
 	public ResponseEntity<Pakket> apiCreate(@RequestBody Pakket pakket) {
 		if (pakket.getId() != 0) {
 			return new ResponseEntity<> (HttpStatus.CONFLICT);

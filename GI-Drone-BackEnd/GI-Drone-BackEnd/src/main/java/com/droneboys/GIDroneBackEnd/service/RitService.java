@@ -1,8 +1,6 @@
 package com.droneboys.GIDroneBackEnd.service;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,24 +11,24 @@ import com.droneboys.GIDroneBackEnd.domain.*;
 
 @Service
 @Transactional
-public class PakketService {
+public class RitService {
 
 	@Autowired
-	private PakketRepository pakrepo;
+	private RitRepository ritrepo;
 	
-	public Pakket save(Pakket pakket) {
-		return pakrepo.save(pakket);
+	public Rit save(Rit rit) {
+		return ritrepo.save(rit);
 	}
 	
-	public Optional<Pakket> findById(long id){
-		return pakrepo.findById(id);
+	public Optional<Rit> findById(long id){
+		return ritrepo.findById(id);
 	}
 	
-	public Set<Pakket> findAll() {
-		return pakrepo.findAll();
+	public Iterable<Rit> findAll() {
+		return ritrepo.findAll();
 	}
 	
 	public void deleteById(long id) {
-		pakrepo.deleteById(id);
+		ritrepo.deleteById(id);
 	}
 }

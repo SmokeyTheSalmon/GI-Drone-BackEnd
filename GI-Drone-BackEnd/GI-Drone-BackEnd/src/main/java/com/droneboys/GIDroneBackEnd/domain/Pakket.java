@@ -16,6 +16,10 @@ public class Pakket {
 	private String adres, afzender, postcode, stad, pakket, naam, huidige_locatie;
 	private int gewicht;
 	
+	
+	@ManyToOne
+	private Rit rit;
+	
 	public Pakket() {}
 	public Pakket(String adres, String afzender) {
 		this.adres = adres;
@@ -76,6 +80,13 @@ public class Pakket {
 	public void setGewicht(int gewicht) {
 		this.gewicht = gewicht;
 	}
+	public Rit getRit() {
+		return rit;
+	}
+
 	
+	public void setRit(Rit rit) {
+		this.rit = rit;
+	}
 	
 }

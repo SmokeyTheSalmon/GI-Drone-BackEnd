@@ -21,7 +21,7 @@ import com.droneboys.GIDroneBackEnd.service.PakketService;
 
 @RestController
 @RequestMapping(
-		path = "dronebase",
+		path = "dronebase/pakket",
 		produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.TEXT_PLAIN_VALUE})
 
 public class PakketEndpoint {
@@ -58,6 +58,7 @@ public class PakketEndpoint {
 					? HttpStatus.OK 
 					: HttpStatus.NOT_FOUND);
 	}
+	
 	//Update
 	@PutMapping(path="{id}")		
 	public ResponseEntity<Pakket> apiUpdate(

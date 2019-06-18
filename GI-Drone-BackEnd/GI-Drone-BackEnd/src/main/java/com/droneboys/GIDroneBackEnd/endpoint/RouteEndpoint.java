@@ -36,7 +36,7 @@ public class RouteEndpoint {
 	// Create
 	@PostMapping
 	public ResponseEntity<Route> apiCreateRoute() {
-		if (routeService.count()!=0) {
+		if (routeService.count()!=1) {
 			return ResponseEntity.noContent().build();
 		} else {
 			routeService.deleteAll();

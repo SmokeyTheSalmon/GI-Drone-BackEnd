@@ -14,7 +14,7 @@ public class Pakket {
 	private long id;
 	
 	private String naam, adres, stad;
-	private int longitude, latitude;
+	private double longitude, latitude;
 	
 	public long getId() {
 		return id;
@@ -38,16 +38,16 @@ public class Pakket {
 	public void setNaam(String naam) {
 		this.naam = naam;
 	}
-	public int getLongitude() {
+	public double getLongitude() {
 		return longitude;
 	}
-	public void setLongitude(int longitude) {
+	public void setLongitude(double longitude) {
 		this.longitude = longitude;
 	}
-	public int getLatitude() {
+	public double getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(int latitude) {
+	public void setLatitude(double latitude) {
 		this.latitude = latitude;
 	}
 }

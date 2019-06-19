@@ -29,6 +29,7 @@ public class PakketEndpoint {
 	// Create
 	@PostMapping
 	public ResponseEntity<Pakket> apiCreate(@RequestBody Pakket pakket) {
+		System.out.println("nieuw pakket is in endpoint geland"); //delete
 		if (pakket.getId() != 0) {
 			return new ResponseEntity<>(HttpStatus.CONFLICT);
 		}

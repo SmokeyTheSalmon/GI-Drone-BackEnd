@@ -1,5 +1,6 @@
 package com.droneboys.GIDroneBackEnd.endpoint;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -13,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,7 +38,7 @@ public class RouteEndpoint {
 	// Create
 	@PostMapping
 	public ResponseEntity<Route> apiCreateRoute() {
-		if (routeService.count()!=1) {
+		if (routeService.count()>1) {
 			return ResponseEntity.noContent().build();
 		} else {
 			routeService.deleteAll();
@@ -44,7 +46,7 @@ public class RouteEndpoint {
 		Iterable<Pakket> allePakketten = this.pakketService.findAll();
 		
 		Iterator<Pakket> pakkettenIterator = allePakketten.iterator();
-		Set<Pakket> pakketten = new HashSet<>();
+		List<Pakket> pakketten = new ArrayList<>();
 		while (pakkettenIterator.hasNext()) {
 			pakketten.add(pakkettenIterator.next());
 		}
@@ -53,6 +55,7 @@ public class RouteEndpoint {
 			return ResponseEntity.noContent().build();
 		} 
 		else {
+			
 			Route route = new Route();
 			route.setPakketten(pakketten);
 			return ResponseEntity.ok(this.routeService.save(route));
@@ -81,6 +84,7 @@ public class RouteEndpoint {
 	}
 
 	// Update
+	@PutMapping
 	public ResponseEntity<Route> apiUpdate(@RequestBody Route route) {
 		if (routeService.count()==0) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);

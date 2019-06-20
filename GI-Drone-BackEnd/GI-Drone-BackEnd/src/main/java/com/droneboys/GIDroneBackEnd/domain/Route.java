@@ -30,8 +30,11 @@ public class Route {
 	private long[] kortsteVolgorde;
 	private int mogelijkheden = 0;
 	
+	private double baseLatitude = 52.509084;
+	private double baseLongitude = 6.066918;
+	
 	@ManyToMany
-	private Set<Pakket> pakketten = new HashSet<>();
+	private List<Pakket> pakketten = new ArrayList<>();
 	
 	public Route() {
 	}
@@ -44,27 +47,39 @@ public class Route {
 		this.id = id;
 	}
 
-	public Set<Pakket> getPakketten() {
+	public List<Pakket> getPakketten() {
 		return pakketten;
 	}
 
-	public void setPakketten(Set<Pakket> nodeLijst) {
+	public void setPakketten(List<Pakket> nodeLijst) {
 		this.pakketten = nodeLijst;
 	}
 	
 	//kortste route methode
 	public List<Pakket> kortsteRoute() {
-		
-		
+
 		List<Pakket> lijst = new ArrayList<>();
 		for (Pakket pakket : pakketten) {
 			lijst.add(pakket);	
 		}
+		
+		//maak start en eind punt
+		Pakket start = new Pakket();
+		start.setLatitude(baseLatitude);
+		start.setLongitude(baseLongitude);
+		start.setAdres("ITPH dronebase");
+		Pakket end = new Pakket();
+		end.setLatitude(baseLatitude);
+		end.setLongitude(baseLongitude);
+		end.setAdres("ITPH dronebase");
+		lijst.add(0,start);
+		lijst.add(end);
+
 		kortsteAfstand = Double.MAX_VALUE;
 		kortsteVolgorde = new long[lijst.size()];
 		List<Pakket> Kortstelijst = new ArrayList<>();
 
-		heapsAlg(lijst, 0, lijst.size()-1);
+		heapsAlg(lijst, 1, lijst.size()-2);
 			
 		for (int i = 0 ; i < kortsteVolgorde.length ; i++) {
 			for (int j = 0 ; j < kortsteVolgorde.length ; j++) {
@@ -133,36 +148,4 @@ public class Route {
 		System.out.println("afstand: " + afstand);
 		mogelijkheden++;
 	}
-		
-		
-		
-		
-		
-		
-		
-//		//RIP ;(
-//		long tempAfstand = 0;
-//		long kortsteAfstand = Long.MAX_VALUE;
-//		long[][] afstandenMatrix = new long[lijst.size()][lijst.size()];
-//		
-//		//afstanden matrix vullen
-//		for(int i = 0; i < lijst.size(); i++) {
-//			for(int j = 0; j < lijst.size(); j++) {
-//				//if (i == j) continue;
-//				afstandenMatrix[i][j] = (long)Math.sqrt(	(lijst.get(j).getLatitude()-lijst.get(i).getLatitude())*
-//															(lijst.get(j).getLatitude()-lijst.get(i).getLatitude()) + 
-//															(lijst.get(j).getLongitude()-lijst.get(i).getLongitude())*
-//															(lijst.get(j).getLongitude()-lijst.get(i).getLongitude()));
-//			}
-//		}
-//		//tijdelijke route
-//		temp = lijst;
-//		int j = 0;
-//		for (int i = 0; i < temp.size(); i++) {
-//			if (lijst.get(i+1)!=null) { j = i+1; }
-//			else { break; }
-//			tempAfstand += afstandenMatrix[i][j];
-//			if (tempAfstand<kortsteAfstand) { kortsteAfstand=tempAfstand; }
-//		}		
-//		return lijst;
 }

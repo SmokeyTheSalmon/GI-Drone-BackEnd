@@ -63,17 +63,15 @@ public class Route {
 			lijst.add(pakket);	
 		}
 		
-		//maak start en eind punt
+		//maak base locatie
 		Pakket start = new Pakket();
 		start.setLatitude(baseLatitude);
 		start.setLongitude(baseLongitude);
-		start.setAdres("ITPH dronebase");
-		Pakket end = new Pakket();
-		end.setLatitude(baseLatitude);
-		end.setLongitude(baseLongitude);
-		end.setAdres("ITPH dronebase");
+		start.setAdres("ITPH");
+		start.setStad("Zwolle");
+		start.setNaam("dronebase");
 		lijst.add(0,start);
-		lijst.add(end);
+		lijst.add(start);
 
 		kortsteAfstand = Double.MAX_VALUE;
 		kortsteVolgorde = new long[lijst.size()];

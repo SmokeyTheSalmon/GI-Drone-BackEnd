@@ -34,7 +34,7 @@ public class Route {
 	private double baseLongitude = 6.066918;
 	
 	@ManyToMany
-	private Set<Pakket> pakketten = new HashSet<>();
+	private List<Pakket> pakketten = new ArrayList<>();
 	
 	public Route() {
 	}
@@ -47,11 +47,11 @@ public class Route {
 		this.id = id;
 	}
 
-	public Set<Pakket> getPakketten() {
+	public List<Pakket> getPakketten() {
 		return pakketten;
 	}
 
-	public void setPakketten(Set<Pakket> nodeLijst) {
+	public void setPakketten(List<Pakket> nodeLijst) {
 		this.pakketten = nodeLijst;
 	}
 	
@@ -67,9 +67,11 @@ public class Route {
 		Pakket start = new Pakket();
 		start.setLatitude(baseLatitude);
 		start.setLongitude(baseLongitude);
+		start.setAdres("ITPH dronebase");
 		Pakket end = new Pakket();
 		end.setLatitude(baseLatitude);
 		end.setLongitude(baseLongitude);
+		end.setAdres("ITPH dronebase");
 		lijst.add(0,start);
 		lijst.add(end);
 

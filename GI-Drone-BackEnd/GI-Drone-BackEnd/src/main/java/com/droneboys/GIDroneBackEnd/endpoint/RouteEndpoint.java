@@ -1,5 +1,6 @@
 package com.droneboys.GIDroneBackEnd.endpoint;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -45,7 +46,7 @@ public class RouteEndpoint {
 		Iterable<Pakket> allePakketten = this.pakketService.findAll();
 		
 		Iterator<Pakket> pakkettenIterator = allePakketten.iterator();
-		Set<Pakket> pakketten = new HashSet<>();
+		List<Pakket> pakketten = new ArrayList<>();
 		while (pakkettenIterator.hasNext()) {
 			pakketten.add(pakkettenIterator.next());
 		}
